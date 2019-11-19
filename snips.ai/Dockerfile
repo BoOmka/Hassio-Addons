@@ -12,7 +12,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install dirmngr \
     git \
     gnupg \
     python3 \
-    python3-venv &&\
+    python3-venv \
+    rsync &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN if [ "$(uname --m)" = 'aarch64' ]; then bash -c 'echo "deb https://raspbian.snips.ai/410c_linaro_buster stable main" > /etc/apt/sources.list.d/snips.list'; fi &&\

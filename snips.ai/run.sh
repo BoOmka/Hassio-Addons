@@ -1,6 +1,5 @@
 #!/usr/bin/env bashio
-set -e
-set +u
+set -e +u
 
 bashio::log.info "Setup Settings"
 
@@ -28,11 +27,7 @@ bashio::fs.file_exists "$assistant_path" || (bashio::log.error "Assistant zip no
 
 bashio::log.info "| Unzip Assistant..."
 unzip -q "$assistant_path" -d /usr/share/snips
-bashio::log.info "| Load Skill configs..."
-mkdir -p /share/snips-skills
-cp -r /share/snips-skills /var/lib/snips/skills
 bashio::log.info "| Generate Skill templates..."
-ln -s /share/snips-skills /var/lib/snips/skills
 snips-template render
 
 pushd /var/lib/snips/skills > /dev/null
@@ -42,10 +37,16 @@ for url in $(awk '$1=="url:" {print $2}' /usr/share/snips/assistant/Snipsfile.ya
   git clone "$url"
 done
 
+bashio::log.info "| Load Skill configs..."
+mkdir -p /share/snips-skills
+rsync -au --include="*/" --include="*.ini" --exclude="*" '/share/snips-skills/' '/var/lib/snips/skills'
+
+bashio::log.info "| Build Skills..."
 find . -maxdepth 1 -type d -print0 | while IFS= read -r -d '' dir; do
     pushd "$dir" > /dev/null
+    cut_dir=${dir:2} 
     if [ -f setup.sh ]; then
-        bashio::log.info "| Run setup.sh for '$dir'"
+        bashio::log.info "  | Run setup.sh for '$cut_dir'"
         python3 -m venv venv
         source venv/bin/activate
         pip3 install --upgrade pip setuptools wheel
@@ -54,11 +55,10 @@ find . -maxdepth 1 -type d -print0 | while IFS= read -r -d '' dir; do
     popd > /dev/null
 done
 
+bashio::log.info "| Save Skill config..."
+rsync -aum --include="*/" --include="*.ini" --exclude="*" '/var/lib/snips/skills/' '/share/snips-skills'
 chown -R _snips-skills:_snips-skills /var/lib/snips/skills
 popd > /dev/null
-
-bashio::log.info "| Save Skill config..."
-find /var/lib/snips/skills/ -name 'config*' -exec cp {} /share/snips-skills \;
 
 bashio::log.info "Start snips-asr"
 snips-asr > /dev/null || bashio::log.error "Snips-ASR service failed!" &

@@ -3,7 +3,7 @@
   "name": "Snips.ai",
   "version": "5.2",
   "slug": "snips.ai",
-  "description": "A local voice controll platform. Now with some additional features.",
+  "description": "A local voice control platform. The base of a satelite setup.",
   "url": "https://github.com/Poeschl/Hassio-Addons/tree/master/snips.ai",
   "arch": [
     "armhf",
@@ -11,10 +11,12 @@
     "aarch64",
     "amd64"
   ],
-  "startup": "system",
+  "startup": "application",
   "boot": "auto",
   "image": "poeschl/hassio-snipsai-{arch}",
   "map": ["share:rw"],
+  "services": ["mqtt:need"],
+  "homeassistant_api": true,
   "schema": {
     "mqtt": {
       "host": "match(^([^/\\s])+(\\.[^/\\s]+)?$)",
