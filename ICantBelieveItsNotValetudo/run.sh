@@ -9,5 +9,5 @@ echo ', "webserver": { "enabled": true, "port": 3000 }}' >> /app/config.json
 bashio::log.info 'Config:'
 cat /app/config.json | bashio::log.info
 
-bashio::log.info 'Start ICantVelieveItsNotValetudo'
+bashio::log.info 'Start ICantBelieveItsNotValetudo'
 npm start
