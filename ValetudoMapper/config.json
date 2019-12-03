@@ -1,6 +1,6 @@
 {
   "name": "ValetudoMapper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "slug": "valetudomapper",
   "description": "This is a simple companion service for valetudo which generates the map pngs.",
   "url": "https://github.com/BoOmka/Hassio-Addons/tree/master/ValetudoMapper",
