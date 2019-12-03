@@ -12,6 +12,7 @@ addons:
 
 env:
   - ADDON="ICantBelieveItsNotValetudo"
+  - ADDON="ValetudoMapper"
 
 install:
   - export PATH="${HOME}/bin:${PATH}"
