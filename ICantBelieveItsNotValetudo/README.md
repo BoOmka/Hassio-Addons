@@ -1,9 +1,9 @@
 # ICantBelieveItsNotValetudo (Hass.io Addon)
-![armhf image pulls](https://img.shields.io/docker/pulls/BoOmka/hassio-icantbelieveitsnotvaletudo-armhf?label=docker%20pulls%20%28armhf%29)
-![armv7 image pulls](https://img.shields.io/docker/pulls/BoOmka/hassio-icantbelieveitsnotvaletudo-armv7?label=docker%20pulls%20%28armv7%29)
-![aarch64 image pulls](https://img.shields.io/docker/pulls/BoOmka/hassio-icantbelieveitsnotvaletudo-aarch64?label=docker%20pulls%20%28aarch64%29)
-![amd64 image pulls](https://img.shields.io/docker/pulls/BoOmka/hassio-icantbelieveitsnotvaletudo-amd64?label=docker%20pulls%20%28amd64%29)
-![i386 image pulls](https://img.shields.io/docker/pulls/BoOmka/hassio-icantbelieveitsnotvaletudo-i386?label=docker%20pulls%20%28i386%29)
+![armhf image pulls](https://img.shields.io/docker/pulls/azhilin/hassio-icantbelieveitsnotvaletudo-armhf?label=docker%20pulls%20%28armhf%29)
+![armv7 image pulls](https://img.shields.io/docker/pulls/azhilin/hassio-icantbelieveitsnotvaletudo-armv7?label=docker%20pulls%20%28armv7%29)
+![aarch64 image pulls](https://img.shields.io/docker/pulls/azhilin/hassio-icantbelieveitsnotvaletudo-aarch64?label=docker%20pulls%20%28aarch64%29)
+![amd64 image pulls](https://img.shields.io/docker/pulls/azhilin/hassio-icantbelieveitsnotvaletudo-amd64?label=docker%20pulls%20%28amd64%29)
+![i386 image pulls](https://img.shields.io/docker/pulls/azhilin/hassio-icantbelieveitsnotvaletudo-i386?label=docker%20pulls%20%28i386%29)
 
 This is the adaption of [ICantBelieveItsNotValetudo](https://github.com/Hypfer/ICantBelieveItsNotValetudo) as a Hass.io addon.
 
