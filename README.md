@@ -4,7 +4,8 @@ My repository with plugins for the [Hass.io](https://www.home-assistant.io/hassi
 
 Plugins:
 
-* ICantBelieveItsNotValetudo - Valetudo Companion for map generation.
+* ValetudoMapper - Valetudo Companion for map generation.
+* ICantBelieveItsNotValetudo - Valetudo Companion for map generation (outdated).
 
 ### License  ![License](https://img.shields.io/github/license/BoOmka/Hassio-Addons)
 
