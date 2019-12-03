@@ -14,7 +14,7 @@
   ],
   "startup": "system",
   "boot": "auto",
-  "image": "poeschl/hassio-icantbelieveitsnotvaletudo-{arch}",
+  "image": "boomka/hassio-icantbelieveitsnotvaletudo-{arch}",
   "ports": {
     "3000/tcp": null
   },
@@ -52,7 +52,7 @@
     "identifier": "rockrobo",
     "topicPrefix": "valetudo",
     "autoconfPrefix": "homeassistant",
-    "broker_url": "mqtt://user:pass@foobar.example",
+    "broker_url": "mqtt://icbinv_mqtt:icbinv_mqtt@192.168.2.2",
     "caPath": "",
     "mapSettings": {
       "drawPath": true,
