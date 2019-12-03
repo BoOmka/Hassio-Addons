@@ -6,11 +6,7 @@
   "url": "https://github.com/BoOmka/Hassio-Addons/tree/master/ValetudoMapper",
   "webui": "http://[HOST]:[PORT:3000]/api/map/image",
   "arch": [
-    "armhf",
-    "armv7",
-    "aarch64",
-    "amd64",
-    "i386"
+    "armv7"
   ],
   "startup": "system",
   "boot": "auto",
