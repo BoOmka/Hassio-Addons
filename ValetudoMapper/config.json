@@ -10,7 +10,7 @@
   ],
   "startup": "system",
   "boot": "auto",
-  "image": "azhilin/hassio-valetudomapper-{arch}",
+  "image": "azhilin/hassio-valetudomapper-{arch}:0.3.1",
   "ports": {
     "3000/tcp": null
   },
